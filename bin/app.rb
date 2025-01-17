@@ -9,7 +9,6 @@ Dir["#{Dir.pwd}/app/**/*.rb"].each { |path| require_relative path }
 
 FILE_PATH = ENV['FILE_PATH']
 OUT_PATH = ENV.fetch('OUT_PATH', "#{Dir.pwd}/tmp/result_#{Time.now.to_i}.csv")
-SEPARATOR = ENV.fetch('ROW_SEPARATOR', "/n")
 BATCH_SIZE = ENV.fetch('BATCH_SIZE', 10_000).to_i
 
 raise 'FILE_PATH mast be set' if FILE_PATH.nil? || FILE_PATH.empty?
