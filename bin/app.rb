@@ -3,6 +3,7 @@
 require 'tempfile'
 require 'date'
 require 'benchmark'
+require 'parallel'
 
 Dir["#{Dir.pwd}/app/**/*.rb"].each { |path| require_relative path }
 
